@@ -16,10 +16,13 @@ module.exports = {
   },
   join: function(item) {
     var string = '';
-    for (var i = 0; i<this.length; i++) {
-      string += this[i] + item
-    }//conditionals : else fo the last item inthe array
-    return string;
+    for (var i = 0; i = this.length; i++) {
+      if (i < this.length) {
+        string += this[i] + item
+      } else {
+        string = this.length[i]
+      }
+    }
   }
 };
 
