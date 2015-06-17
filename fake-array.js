@@ -25,12 +25,3 @@ module.exports = {
     }
   }
 };
-
-//join retruns a string
-
-// var b = ['a', 'b', 'c'];
-// var b2 = b.join(', ');
-// var b3 = b.join('! ')
-
-// assert.equal(b2, 'a, b, c', "expected" + b2 + " to look like this!");
-// assert.equal(b3, 'a! b! c!', "expected" + b3 + " to look like this!");
