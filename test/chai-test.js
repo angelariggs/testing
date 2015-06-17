@@ -34,7 +34,7 @@ var fakeArray = require('../fake-array.js');
     });
 
     it('should pop off 11 and 9, then return the last element added by push', function() {
-      assert.equal(fakeArray.push(12), 5)
+      expect(fakeArray.push(12)).to.equal(5);
     });
   });
 
@@ -52,21 +52,23 @@ var fakeArray = require('../fake-array.js');
     });
 
     it('Push on 12, length of fakeArray should be 6', function(){
-      assert.equal(arrLength, 6)
+      expect(arrLength).to.equal(6);
     });
   });
 
   describe('Joining with an exclamation point', function() {
     var arrJoin;
-
     before(function() {
-      arrJoin = fakeArray.join('! ');
+      arrJoin = fakeArray.join('+ ');
+      console.log(arrJoin);
     });
 
     it('should add an exc. point between array items', function() {
-      assert.equal(arrJoin, '2! 4! 6! 8! 10! 12');
+      expect(arrJoin).to.equal('2+ 4+ 6+ 8+ 10+ 12');
     });
   });
+
+
 
 
 

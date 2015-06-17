@@ -16,12 +16,20 @@ module.exports = {
   },
   join: function(item) {
     var string = '';
-    for (var i = 0; i = this.length; i++) {
-      if (i < this.length) {
-        string += this[i] + item
-      } else {
-        string = this.length[i]
-      }
-    }
-  }
+    for (var i = 0; i < this.length-1; i++) {
+      string += this[i] + item;
+    } 
+    string += this[this.length-1];
+    return string;
+  } 
 };
+
+
+
+
+
+
+
+
+
+
