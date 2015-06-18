@@ -67,6 +67,25 @@ var assert = require('assert');
     });
   });
 
+  describe('Filtering out numbers greater than or equal to 10', function() {
+    before(function() {
+      fakeArray[0] = 2;
+      fakeArray[1] = 4;
+      fakeArray[2] = 6;
+      fakeArray[3] = 8;
+      fakeArray[4] = 10;
+      fakeArray[5] = 12;
+    });
+
+    function lessThanTen (nums) {
+      return nums < 10;
+    }
+
+    it('should return 2,4,6,8', function() {
+      assert.deepEqual(fakeArray.filter(lessThanTen), [2,4,6,8]);
+    })
+  })
+
 
 
 

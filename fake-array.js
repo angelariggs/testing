@@ -21,8 +21,28 @@ module.exports = {
     } 
     string += this[this.length-1];
     return string;
-  } 
+  },
+  filter: function (callback) {
+    var arr = [];
+    for (var i = 0; i < this.length; i++) {
+      if (callback(this[i]) === true) {
+        arr.push(this[i]);
+      }
+    } return arr;
+  }
+
 };
+
+//filter checks each item in the array against a param
+//if the param is met, the item from the array is kept and put into a new array
+
+// function filt(nums) {
+//   return nums <=10;
+// }
+
+// var arr =[2,4,6,8,10,12];
+
+// console.log(arr.filter(filt));
 
 
 
